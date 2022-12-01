@@ -1,0 +1,42 @@
+var data = [
+	{
+		"phone": "1-256-762-7003",
+		"name": "Ora Vaughn",
+		"email": "scelerisque.scelerisque@yahoo.couk",
+		"address": "555-815 Curabitur St.",
+		"country": "Ukraine",
+		"currency": "$83.55"
+	},
+	{
+		"phone": "(560) 211-1372",
+		"name": "Heidi Gardner",
+		"email": "pharetra@outlook.org",
+		"address": "3636 Sem Rd.",
+		"country": "Singapore",
+		"currency": "$10.77"
+	},
+	{
+		"phone": "(876) 713-2307",
+		"name": "Ferdinand Serrano",
+		"email": "euismod.ac@hotmail.org",
+		"address": "Ap #598-7860 Dapibus Road",
+		"country": "Austria",
+		"currency": "$57.21"
+	},
+	{
+		"phone": "(533) 537-7663",
+		"name": "Regan Kent",
+		"email": "ullamcorper.nisl@outlook.edu",
+		"address": "114-5278 Nisi. Road",
+		"country": "Sweden",
+		"currency": "$96.16"
+	},
+	{
+		"phone": "(958) 654-4075",
+		"name": "Dennis Diaz",
+		"email": "vitae@outlook.org",
+		"address": "7080 Commodo Avenue",
+		"country": "United Kingdom",
+		"currency": "$9.87"
+	}
+];

@@ -1,0 +1,1 @@
+[{"id":1,"name":"Juan","lastname":"Perez","age":30,"email":"juan@gmail.com","courses":["javascript","node","react"]},{"id":2,"name":"Maria","lastname":"Perez","age":33,"email":"maria@gmail.com","courses":["ux/ui","marketing digital","fotografia"]},{"id":81,"nombre":"Maria","apellido":"Lopez","edad":15,"course":"React","email":"maria.lopez@gmail.com"}]
