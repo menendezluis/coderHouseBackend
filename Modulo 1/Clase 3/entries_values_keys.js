@@ -32,9 +32,9 @@ let impuestos = {
 };
 
 //console.log(impuestos.IVA.nombre);
-let miPrimeraLlave = Object.keys(impuestos);
+let miPrimeraLlave = Object.keys(impuestos); //["IVA", "IIBB", "GANANCIAS", "SUSS", "ARBA", "IOMA"]
 
-let miSegundaLlave = Object.keys(impuestos.IVA);
+let miSegundaLlave = Object.keys(impuestos[miPrimeraLlave[0]]); //["nombre", "porcentaje", "tipo"]
 
 //console.log(miPrimeraLlave, miSegundaLlave);
 

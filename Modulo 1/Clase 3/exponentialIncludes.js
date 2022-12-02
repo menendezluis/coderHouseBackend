@@ -1,8 +1,8 @@
 //Exponcencial ** ertmiete hacer el equivalente a la operacion Math.pow(base, exp)
 //ejemplo: Math.pow(2, 3) que es 2 elevado a la 3
-/*let valores = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let valores = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-let nuevosValores = valores.map((valor) => valor ** 2);
+let nuevosValores = valores.map((valor, indice) => valor ** indice);
 //valores.map((valor, indice) => Math.pow(valor, indice));
 console.log(nuevosValores); //[1, 2, 9, 64, 625, 7776, 117649, 2097152, 43046721, 1000000000]
 
