@@ -78,5 +78,61 @@
 		"thumbnail": "https://google.com.ar",
 		"code": "9876543",
 		"stock": 111
+	},
+	{
+		"title": "Remera",
+		"description": "Remera de algodon",
+		"price": 1000,
+		"thumbnail": "https://coderhouse.com",
+		"code": "123456",
+		"stock": 10
+	},
+	{
+		"title": "Camisa",
+		"description": "Camisa de algodon",
+		"price": 2222,
+		"thumbnail": "https://google.com.ar",
+		"code": "234567",
+		"stock": 5
+	},
+	{
+		"title": "Cinturon",
+		"description": "Cinturon de cuero",
+		"price": 789876554,
+		"thumbnail": "https://google.com.ar",
+		"code": "9876543",
+		"stock": 111
+	},
+	{
+		"title": "Remera",
+		"description": "Remera de algodon",
+		"price": 1000,
+		"thumbnail": "https://coderhouse.com",
+		"code": "123456",
+		"stock": 10
+	},
+	{
+		"title": "Camisa",
+		"description": "Camisa de algodon",
+		"price": 2222,
+		"thumbnail": "https://google.com.ar",
+		"code": "234567",
+		"stock": 5
+	},
+	{
+		"title": "Cinturon",
+		"description": "Cinturon de cuero",
+		"price": 789876554,
+		"thumbnail": "https://google.com.ar",
+		"code": "9876543",
+		"stock": 111
+	},
+	{
+		"title": "Pantalon",
+		"description": "Pantalon de mezclilla",
+		"price": 3333,
+		"thumbnail": "https://google.com.ar",
+		"code": "3435353",
+		"stock": 15
 	}
 ]
