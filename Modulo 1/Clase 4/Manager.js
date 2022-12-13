@@ -58,6 +58,18 @@ const runAwait = async () => {
   console.log("getusers", users);
   const userFilter = await userManager.getUserById(1);
   console.log("filteruser", userFilter);
+  //update user
+  await userManager.updateUserById(1, {
+    name: "Jose Carlos",
+    lastname: "Perez",
+    age: 30,
+    email: "juancarlosperez@gmail.com",
+    courses: ["javascript", "node", "react"],
+  });
+  userManager.getUsers().then((users) => {
+    console.log(users);
+  });
+
   // await userManager.deleteUserById(1);
   //const users2 = await userManager.getUsers();
   //await userManager.deleteUserById(2);
@@ -66,6 +78,7 @@ const runAwait = async () => {
 };
 
 runAwait();
+
 /*
 userManager.addUser(user);
 

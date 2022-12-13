@@ -30,8 +30,18 @@ userManager.createUser("Juan", "Jacinto", "jjacinto", "abcdef");
 console.log(userManager.getUsers());
 
 //borramos el usuario con username jjacinto con contraseña incorrecta
-userManager.deleteUser("pgomez", "fedcba");
+//userManager.deleteUser("pgomez", "fedcba");
 console.log(userManager.getUsers());
+userManager.updateUser(
+  "pgomez",
+  "fedcba",
+  "Pedro",
+  "Gomez",
+  "pgomez",
+  "fedcba"
+);
+console.log(userManager.getUsers());
+
 //imprimimos todos los usuarios
 //console.log(userManager.getUsers());
 //borramos el usuario con username pgomez con contraseña fedcba

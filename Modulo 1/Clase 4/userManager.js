@@ -13,7 +13,7 @@ class UserManager {
     return new Promise((resolve, reject) => {
       if (this.fileExists()) {
         console.log("El archivo existe");
-        fs.readFile("./users.json", (err, data) => {
+        fs.readFile(this.file, (err, data) => {
           if (err) {
             return console.log("Error al leer el archivo");
           }
@@ -53,6 +53,25 @@ class UserManager {
         }
         this.users = JSON.parse(data);
         resolve(this.users);
+      });
+    });
+  }
+
+  updateUserById(id, user) {
+    return new Promise((resolve, reject) => {
+      fs.readFile(this.file, "utf8", (err, data) => {
+        if (err) {
+          reject(err);
+        }
+        this.users = JSON.parse(data);
+        const userIndex = this.users.findIndex((user) => user.id === id);
+        this.users[userIndex] = user;
+        fs.writeFile(this.file, JSON.stringify(this.users), (err) => {
+          if (err) {
+            reject(err);
+          }
+          resolve();
+        });
       });
     });
   }

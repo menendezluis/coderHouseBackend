@@ -33,6 +33,38 @@ class ProductManager {
     }
   }
 
+  updateProduct(id, title, description, price, thumbnail, code, stock) {
+    let myID = parseInt(id);
+    let miPRoducto = null;
+    this.products.forEach((producto) => {
+      if (producto.id === myID) {
+        miPRoducto = producto;
+      }
+    });
+    if (miPRoducto === null) {
+      return console.log("No existe el producto");
+    } else {
+      if (title !== undefined) {
+        miPRoducto.title = title;
+      }
+      if (description !== undefined) {
+        miPRoducto.description = description;
+      }
+      if (price !== undefined) {
+        miPRoducto.price = price;
+      }
+      if (thumbnail !== undefined) {
+        miPRoducto.thumbnail = thumbnail;
+      }
+      if (code !== undefined) {
+        miPRoducto.code = code;
+      }
+      if (stock !== undefined) {
+        miPRoducto.stock = stock;
+      }
+    }
+  }
+
   getProducts() {
     return this.products;
   }
@@ -73,3 +105,15 @@ productManager.agregarProducto(
 console.log(productManager.getProducts());
 
 console.log("busqueda de producto", productManager.getProductById(1));
+
+productManager.updateProduct(
+  1,
+  "Rinonera",
+  "Rinonera",
+  1000,
+  "https://www.google.com/url?sa=i&url=https%3A%2F%2Fes.vecteezy.com%2Ffree-png-es%2Fremera&psig=AOvVaw1ZTU6UeioevU4qe9gMA_FL&ust=1670082090683000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCPD4keCi2_sCFQAAAAAdAAAAABAE",
+  "1234",
+  10
+);
+
+console.log(productManager.getProducts());
