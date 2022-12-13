@@ -21,9 +21,19 @@ const miFuncionAsincrona = () => {
   console.log("Realizando operacion");
   let contador = 0;
   let secondRound = false;
+  let minumero = 0;
+
+  //setInterval(() => {}, 1000);
   const temporizador = setInterval(() => {
     console.log(contador);
+
     secondRound ? contador-- : contador++;
+    //el ternario es lo mismo que esto
+    /*if(secondRound) {
+      contador--
+    } else {
+      contador++
+    }*/
     if (contador === 5) {
       secondRound = true;
     }
@@ -35,3 +45,5 @@ const miFuncionAsincrona = () => {
 };
 console.log("Ejecucion asincrona");
 miFuncionAsincrona();
+
+//github copilot
