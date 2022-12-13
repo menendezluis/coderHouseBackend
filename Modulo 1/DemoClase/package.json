@@ -1,0 +1,14 @@
+{
+  "name": "democlase",
+  "version": "1.0.0",
+  "description": "esta es una demo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "alumnos coderhouse",
+  "license": "ISC",
+  "dependencies": {
+    "moment": "^2.15.4"
+  }
+}
