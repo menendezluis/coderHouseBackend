@@ -16,7 +16,6 @@ class ProductManager {
           if (data) {
             this.products = JSON.parse(data);
           }
-          //get max id from products array and increment it by 1
           product.id = this.products.length
             ? this.products.reduce(
                 (max, product) => (product.id > max ? product.id : max),
