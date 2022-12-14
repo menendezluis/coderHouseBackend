@@ -40,6 +40,46 @@ const manageProductManager = async () => {
     code: "3435353",
     stock: 15,
   });
+  await ProductManager.addProduct({
+    title: "Pantalon",
+    description: "Pantalon de mezclilla",
+    price: 3333,
+    thumbnail: "https://google.com.ar",
+    code: "3435353",
+    stock: 15,
+  });
+  await ProductManager.addProduct({
+    title: "Pantalon",
+    description: "Pantalon de mezclilla",
+    price: 3333,
+    thumbnail: "https://google.com.ar",
+    code: "3435353",
+    stock: 15,
+  });
+  await ProductManager.addProduct({
+    title: "Pantalon",
+    description: "Pantalon de mezclilla",
+    price: 3333,
+    thumbnail: "https://google.com.ar",
+    code: "3435353",
+    stock: 15,
+  });
+  await ProductManager.addProduct({
+    title: "Pantalon",
+    description: "Pantalon de mezclilla",
+    price: 3333,
+    thumbnail: "https://google.com.ar",
+    code: "3435353",
+    stock: 15,
+  });
+  await ProductManager.addProduct({
+    title: "Pantalon",
+    description: "Pantalon de mezclilla",
+    price: 3333,
+    thumbnail: "https://google.com.ar",
+    code: "3435353",
+    stock: 15,
+  });
   // get products
   const products = await ProductManager.getProducts();
   console.log(products);
@@ -61,6 +101,10 @@ const manageProductManager = async () => {
 
   // delete product
   await ProductManager.deleteProduct(2);
+  await ProductManager.deleteProduct(4);
+  await ProductManager.deleteProduct(5);
+  await ProductManager.deleteProduct(6);
+
   const products2 = await ProductManager.getProducts();
   console.log("produts 2", products2);
 };

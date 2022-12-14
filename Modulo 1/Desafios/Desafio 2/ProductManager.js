@@ -16,8 +16,15 @@ class ProductManager {
           if (data) {
             this.products = JSON.parse(data);
           }
-          product.id = this.products.length + 1;
+          //get max id from products array and increment it by 1
+          product.id = this.products.length
+            ? this.products.reduce(
+                (max, product) => (product.id > max ? product.id : max),
+                0
+              ) + 1
+            : 1;
           this.products.push(product);
+
           fs.writeFile(
             this.path,
             JSON.stringify(this.products, null, "\t"),
