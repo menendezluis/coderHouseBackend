@@ -60,7 +60,7 @@ const manageProductManager = async () => {
   );
 
   // delete product
-  //await ProductManager.deleteProduct(1);
+  await ProductManager.deleteProduct(2);
   const products2 = await ProductManager.getProducts();
   console.log("produts 2", products2);
 };
