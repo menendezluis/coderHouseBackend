@@ -16,7 +16,6 @@ class ProductManager {
           if (data) {
             this.products = JSON.parse(data);
           }
-          //add product id to product
           product.id = this.products.length + 1;
           this.products.push(product);
           fs.writeFile(
