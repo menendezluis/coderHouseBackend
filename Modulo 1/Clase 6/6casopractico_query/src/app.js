@@ -3,7 +3,6 @@ import express from "express";
 const app = express();
 
 app.use(express.urlencoded({ extended: true }));
-//generar 6 usuarios con id, nombre, apellido ,edad, genero y email
 const usuarios = [
   {
     id: 1,
@@ -58,7 +57,9 @@ const usuarios = [
 //filtro por genero con query
 
 app.get("/usuarios", (req, res) => {
-  const genero = req.query.genero;
+  const { genero } = req.query;
+  console.log(req.query);
+  const generodos = req.query.genero;
   if (genero && (genero == "masculino" || genero == "femenino")) {
     const usuariosFiltrados = usuarios.filter((u) => u.genero == genero);
     res.json(
@@ -73,7 +74,7 @@ app.get("/usuarios", (req, res) => {
 
 //filtro por genero con params
 app.get("/usuarios/:genero", (req, res) => {
-  const genero = req.params.genero;
+  const { genero } = req.params;
   if (genero && (genero == "masculino" || genero == "femenino")) {
     const usuariosFiltrados = usuarios.filter((u) => u.genero == genero);
     res.json(usuariosFiltrados);
