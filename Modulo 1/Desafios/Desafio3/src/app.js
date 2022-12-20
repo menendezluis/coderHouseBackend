@@ -35,17 +35,6 @@ app.get("/productos", async (req, res) => {
 });
 
 // create a route for the app
-app.get("/productosRandom", async (req, res) => {
-  try {
-    const products = await productManager.getProducts();
-    const randomProduct = productManager.getRandomProduct(products);
-    res.send(randomProduct);
-  } catch (err) {
-    res.status(500).send(err.message);
-  }
-});
-
-// create a route for the app
 app.post("/productos", async (req, res) => {
   try {
     const products = await productManager.getProducts();
