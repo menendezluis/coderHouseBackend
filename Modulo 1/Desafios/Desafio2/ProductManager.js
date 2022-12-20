@@ -1,5 +1,10 @@
 // Path: Modulo 1/Desafios/Desafio 2/ProductManager.js
-const fs = require("fs");
+import fs from "fs";
+import path from "path";
+
+//use path
+const __dirname = path.resolve();
+const filePath = (tempPath) => path.join(__dirname, tempPath);
 
 class ProductManager {
   constructor(path, products) {
@@ -9,7 +14,7 @@ class ProductManager {
 
   addProduct(product) {
     return new Promise((resolve, reject) => {
-      fs.readFile(this.path, "utf-8", (err, data) => {
+      fs.readFile(filePath(this.path), "utf-8", (err, data) => {
         if (err) {
           reject(err);
         } else {
@@ -25,7 +30,7 @@ class ProductManager {
           this.products.push(product);
 
           fs.writeFile(
-            this.path,
+            filePath(this.path),
             JSON.stringify(this.products, null, "\t"),
             (err) => {
               if (err) {
@@ -41,8 +46,9 @@ class ProductManager {
   }
 
   getProducts() {
+    console.log(filePath(this.path));
     return new Promise((resolve, reject) => {
-      fs.readFile(this.path, "utf-8", (err, data) => {
+      fs.readFile(filePath(this.path), "utf-8", (err, data) => {
         if (err) {
           reject(err);
         } else {
@@ -55,7 +61,7 @@ class ProductManager {
 
   getProductById(id) {
     return new Promise((resolve, reject) => {
-      fs.readFile(this.path, "utf-8", (err, data) => {
+      fs.readFile(filePath(this.path), "utf-8", (err, data) => {
         if (err) {
           reject(err);
         } else {
@@ -69,7 +75,7 @@ class ProductManager {
 
   updateProduct(id, product) {
     return new Promise((resolve, reject) => {
-      fs.readFile(this.path, "utf-8", (err, data) => {
+      fs.readFile(filePath(this.path), "utf-8", (err, data) => {
         if (err) {
           reject(err);
         } else {
@@ -77,7 +83,7 @@ class ProductManager {
           const index = this.products.findIndex((product) => product.id === id);
           this.products[index] = product;
           fs.writeFile(
-            this.path,
+            filePath(this.path),
             JSON.stringify(this.products, null, "\t"),
             (err) => {
               if (err) {
@@ -94,7 +100,7 @@ class ProductManager {
 
   deleteProduct(id) {
     return new Promise((resolve, reject) => {
-      fs.readFile(this.path, "utf-8", (err, data) => {
+      fs.readFile(filePath(this.path), "utf-8", (err, data) => {
         if (err) {
           reject(err);
         } else {
@@ -102,7 +108,7 @@ class ProductManager {
           const index = this.products.findIndex((product) => product.id === id);
           this.products.splice(index, 1);
           fs.writeFile(
-            this.path,
+            filePath(this.path),
             JSON.stringify(this.products, null, "\t"),
             (err) => {
               if (err) {
@@ -118,4 +124,4 @@ class ProductManager {
   }
 }
 
-module.exports = ProductManager;
+export default ProductManager;

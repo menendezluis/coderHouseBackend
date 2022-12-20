@@ -1,6 +1,5 @@
 //importar ProductManager
-const ProductManager_External = require("./ProductManager");
-
+import ProductManager_External from "./ProductManager.js";
 //instanciar ProductManager
 const ProductManager = new ProductManager_External("./products.json", []);
 
@@ -110,3 +109,10 @@ const manageProductManager = async () => {
 };
 
 manageProductManager();
+
+export const getAllProducts = async () => {
+  const products = await ProductManager.getProducts();
+  return products;
+};
+
+export default ProductManager;
