@@ -25,10 +25,8 @@ app.get("/productos", async (req, res) => {
     let limitedProducts;
     if (limit) {
       limitedProducts = products.slice(0, limit);
-      res.send(limitedProducts);
-    } else {
-      limitedProducts = products;
     }
+    res.send(limitedProducts || products);
   } catch (err) {
     res.status(500).send(err.message);
   }
