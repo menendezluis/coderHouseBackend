@@ -1,5 +1,5 @@
 import { Router } from "express";
-//import upload from "../utils.js";
+import upload from "../utils.js";
 
 const router = Router();
 
@@ -42,18 +42,18 @@ router.get("/:id", (req, res) => {
 
 router.post("/", (req, res) => {
   const user = req.body;
-  if (!user.name || !user.lastname) {
+  /*if (!user.name || !user.lastname) {
     res.status(400).send("Faltan datos");
-  }
+  }*/
   user.id = users.length + 1;
-  /*
+
   upload(req, res, (err) => {
     if (err) {
       res.status(500).send("Error al subir el archivo");
     }
     user.avatar = req.file.filename;
   });
-*/
+
   users.push(user);
   res.send({
     status: "ok",
