@@ -15,6 +15,8 @@ Modulo 1
 Modulo 2
 
 - Clase 8: Router y Multer
+- Clase 9: Motores de plantillas
+- Clase 10: WebSockets
 
 Proyecto Final
 
