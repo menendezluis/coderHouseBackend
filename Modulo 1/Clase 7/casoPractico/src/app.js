@@ -25,7 +25,7 @@ app.get("/api/frase", (req, res) => {
 
 app.get("/api/palabras/:palabra", (req, res) => {
   const palabra = req.params.palabra;
-  const index = frase.indexOf(palabra);
+  //const index = frase.indexOf(palabra);
   const existsWord = frase.includes(palabra);
   if (!existsWord) {
     res.status(404).send("Palabra no encontrada");

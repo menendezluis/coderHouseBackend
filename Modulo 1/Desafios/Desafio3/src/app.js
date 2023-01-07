@@ -44,6 +44,20 @@ app.post("/productos", async (req, res) => {
   }
 });
 
+app.get("/productos/:id", async (req, res) => {
+  try {
+    const products = await productManager.getProducts();
+    const id = req.params.id;
+    const product = products.find((product) => product.id === id);
+    if (!product) {
+      res.status(404).send("Producto no encontrado");
+    }
+    res.send(product);
+  } catch (err) {
+    res.status(500).send(err.message);
+  }
+});
+
 //start the server
 app.listen(port, () => {
   console.log(`Iniciado en http://localhost:${port}`);

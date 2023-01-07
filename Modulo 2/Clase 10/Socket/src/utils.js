@@ -45,4 +45,9 @@ export const getRandomInt = (max) => {
   return Math.floor(Math.random() * max);
 };
 
+export const isEmail = (email) => {
+  const regex = /\S+@\S+\.\S+/;
+  return regex.test(email);
+};
+
 export default { users, getRandomInt };
