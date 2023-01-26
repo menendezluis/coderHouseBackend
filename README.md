@@ -17,6 +17,11 @@ Modulo 2
 - Clase 8: Router y Multer
 - Clase 9: Motores de plantillas
 - Clase 10: WebSockets
+- Clase 11: Chat & Handlebars
+  #Clase 12,13: Introduccion a Mongo DB y CRUD con mongo
+- Clase 14: Mongoose
+- Clase 15: Clase de integracion
+- Clase 16: Mongo Avanzado
 
 Proyecto Final
 
