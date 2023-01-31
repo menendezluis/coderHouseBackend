@@ -1,0 +1,32 @@
+export const names = [
+  "Juan",
+  "Pedro",
+  "Maria",
+  "Jose",
+  "Luis",
+  "Ana",
+  "Luisa",
+  "Carlos",
+  "Rosa",
+  "Ricardo",
+  "Miguel",
+  "Francisco",
+  "Jorge",
+  "Manuel",
+];
+
+export const lastNames = [
+  "Garcia",
+  "Gonzalez",
+  "Rodriguez",
+  "Fernandez",
+  "Lopez",
+  "Martinez",
+  "Sanchez",
+  "Perez",
+  "Gomez",
+  "Martin",
+  "Jimenez",
+  "Ruiz",
+  "Hernandez",
+];
