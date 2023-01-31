@@ -31,7 +31,7 @@ mongoose.connect(
 );
 
 /*mongoose.connect(
-    "mongodb+srv://coderhouse:coder123@cluster0.pnpufdn.mongodb.net/coderhouse?retryWrites=true&w=majority",
+    "mongodb+srv://<user>:<pass>@cluster0.pnpufdn.mongodb.net/coderhouse?retryWrites=true&w=majority",
     (error) => {
       if (error) {
         console.log("Error de conexion");
