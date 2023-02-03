@@ -4,11 +4,13 @@ import userModel from "./models/usuarios.model.js";
 //import { studentModel } from "./models/students.model.js";
 //import { courseModel } from "./models/courses.model.js";
 import postModel from "./models/posts.model.js";
+import * as dotenv from "dotenv";
+dotenv.config();
 
 //import Loader from "./loader.js";
 
 const app = express();
-const PORT = 3232;
+const PORT = process.env.PORT || 8080;
 
 const server = app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
@@ -21,7 +23,7 @@ server.on("error", (error) => {
 const environment = async () => {
   await mongoose
     .connect(
-      "mongodb+srv://coderhouse:coder123@cluster0.pnpufdn.mongodb.net/usuarios?retryWrites=true&w=majority"
+      `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.pnpufdn.mongodb.net/${process.env.DB_NAME}?retryWrites=true&w=majority`
     )
     .then(() => {
       console.log("Conectado a la base de datos");
@@ -107,11 +109,11 @@ const environment = async () => {
     });
 
     */
-  const user = new userModel({ name: "John Doe" });
-  await user.save();
+  //const user = new userModel({ name: "Franco Gordillo" });
+  //await user.save();
 
-  const post = new postModel({ title: "A post", author: user._id });
-  await post.save();
+  //const post = new postModel({ title: "buenas a todos!", author: user._id });
+  //await post.save();
 
   const populatedPost = await postModel
     .find({ title: "A post" })

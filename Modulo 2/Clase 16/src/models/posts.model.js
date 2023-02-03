@@ -1,6 +1,7 @@
+// postModel.model.js
+
 import mongoose from "mongoose";
 
-// postModel.model.js
 
 const postSchema = new mongoose.Schema({
   title: String,

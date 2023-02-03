@@ -148,4 +148,5 @@ const isEnvSetted = () => {
   else return false;
 };
 
+res.status().send()
 isEnvSetted && environment();
