@@ -1,20 +1,20 @@
 import mongoose from "mongoose";
 
-const useCollection = "cursos";
+const courseCollection = "courses";
 
 const courseSchema = new mongoose.Schema({
   title: String,
   description: String,
-  difficulty: String,
+  difficulty: Number,
   topics: {
     type: Array,
     default: [],
   },
-  profesor: String,
+  professor: String,
   students: {
     type: Array,
     default: [],
   },
 });
 
-export const courseModel = mongoose.model(useCollection, courseSchema);
+export const courseModel = mongoose.model(courseCollection, courseSchema);

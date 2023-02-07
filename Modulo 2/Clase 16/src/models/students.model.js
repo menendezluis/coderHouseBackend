@@ -1,19 +1,18 @@
 import mongoose from "mongoose";
-import { courseModel } from "./courses.model.js";
 
-const useCollection = "estudiantes";
+const studentCollection = "students";
 
 const studentSchema = new mongoose.Schema({
   first_name: String,
   last_name: String,
   email: String,
   gender: String,
-  cursos: {
+  courses: {
     type: [
       {
-        curso: {
+        course: {
           type: mongoose.Schema.Types.ObjectId,
-          ref: courseModel,
+          ref: "courses",
         },
       },
     ],
@@ -21,4 +20,12 @@ const studentSchema = new mongoose.Schema({
   },
 });
 
-export const studentModel = mongoose.model(useCollection, studentSchema);
+studentSchema.pre("find", function () {
+  this.populate("courses.course");
+});
+
+studentSchema.pre("findOne", function () {
+  this.populate("courses.course");
+});
+
+export const studentModel = mongoose.model(studentCollection, studentSchema);

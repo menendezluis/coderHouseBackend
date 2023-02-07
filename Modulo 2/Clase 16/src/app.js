@@ -1,9 +1,9 @@
 import express from "express";
 import mongoose from "mongoose";
 import userModel from "./models/usuarios.model.js";
-//import { studentModel } from "./models/students.model.js";
-//import { courseModel } from "./models/courses.model.js";
-import postModel from "./models/posts.model.js";
+import { studentModel } from "./models/students.model.js";
+import { courseModel } from "./models/courses.model.js";
+//import postModel from "./models/posts.model.js";
 import * as dotenv from "dotenv";
 dotenv.config();
 
@@ -33,28 +33,48 @@ const environment = async () => {
       process.exit();
     });
 
-  //let student = await studentModel.findOne({ _id: "63d2945dfdc54c546083a7c6" });
-  /*.populate({
-      path: "cursos.curso",
-      select: "title description difficulty profesor",
-    });
-
- // console.log("pupulate", student);
-  */
-  /* student.cursos.push({
-    curso: "63d291626513ea34c3eef256",
+  /* await studentModel.create({
+    first_name: "Juan",
+    last_name: "Perez",
+    email: "juan.perez@gmail.com",
+    gender: "M",
   });
+  
+  await courseModel.create({
+    title: "Curso de Backend",
+    description: "Curso de Backend con Node.js y MongoDB",
+    difficulty: 5,
+    topics: ["Node.js", "MongoDB", "Express"],
+    professor: "Mauricio",
+  });
+*/
+  //let student = await studentModel.find({ _id: "63dd1f8ab2644b6dd0ba334b" });
+  //  student[0].courses.push({ course: "63dc468219cc0f23d80607ee" });
 
-  //console.log("despues", student);
+  /*let student = await studentModel.findOne({ _id: "63dd1f8ab2644b6dd0ba334b" });
+  student.courses.push({ course: "63dd2038dfe3b9e3c408a3eb" });
+  
+  //console.log(student);
 
-  let result = await studentModel.updateOne(
-    { _id: "63d28e33cab0d2bde34515b6" },
+  let response = await studentModel.updateOne(
+    { _id: "63dd1f8ab2644b6dd0ba334b" },
     student
   );
+  console.log(response);
+  */
 
-  console.log(result);
-*/
-  const users = [
+  /*let student = await studentModel
+    .findOne({ _id: "63dd1f8ab2644b6dd0ba334b" })
+    .populate("courses.course");
+  console.log(JSON.stringify(student, null, 2));
+  */
+  let student = await studentModel.findOne({ _id: "63dd1f8ab2644b6dd0ba334b" });
+
+  //console.log(student);
+  console.log(JSON.stringify(student, null, 2));
+
+  //
+  /* const users = [
     { name: "John Doe" },
     { name: "Jane Doe" },
     { name: "Bob Smith" },
@@ -69,7 +89,7 @@ const environment = async () => {
     { title: "A final post", author: users[3]._id },
     { title: "The last post", author: users[4]._id },
   ];
-
+*/
   /*userModel.create(users, function (err, insertedUsers) {
     if (err) {
       console.log(err);
@@ -115,10 +135,12 @@ const environment = async () => {
   //const post = new postModel({ title: "buenas a todos!", author: user._id });
   //await post.save();
 
-  const populatedPost = await postModel
+  /*const populatedPost = await postModel
     .find({ title: "A post" })
     .populate("author", "name")
     .exec();
   console.log(populatedPost);
+  */
 };
+
 environment();
