@@ -1,11 +1,12 @@
 import { Router } from "express";
 import userModel from "../model/user.model.js";
+import { createHash } from "../utils.js";
 
 const router = Router();
 
 router.get("/", (req, res) => {
   console.log("desde el servidor");
-  res.render("signup", { styles: "css/signup.css" });
+  res.render("signup", { style: "css/signup.css" });
 });
 
 router.post("/", async (req, res) => {
@@ -16,7 +17,7 @@ router.post("/", async (req, res) => {
     last_name,
     email,
     age,
-    password,
+    password: createHash(password),
   };
 
   try {

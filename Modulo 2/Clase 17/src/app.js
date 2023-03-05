@@ -36,6 +36,11 @@ const environment = async () => {
 
   console.log("Conectado a la base de datos");
   /* let studentsArray = [];
+
+const randomNumberFromArray = (array) => {
+  return Math.floor(Math.random() * array.length);
+};
+
   const groups = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J"];
   const genderList = ["M", "F"];
   for (let x = 0; x <= 30; x++) {

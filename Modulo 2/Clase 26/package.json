@@ -1,0 +1,16 @@
+{
+  "name": "clase38",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "module",
+  "dependencies": {
+    "clase37newpack": "^1.0.0",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mongoose": "^6.9.1"
+  },
+  "scripts": {
+    "start": "nodemon index.js"
+  }
+}
