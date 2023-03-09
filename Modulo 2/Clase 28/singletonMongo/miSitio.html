@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Este es otro sitio</title>
+  </head>
+  <body>
+    <h1>Saludos desde este sitio</h1>
+    <button onclick="presionar()">Haz click aqui</button>
+    <script>
+      async function presionar() {
+        console.log("Hola clase");
+        try {
+          const response = await fetch("http://localhost:3000/");
+          const data = await response.json();
+          console.log(data);
+        } catch (err) {
+          console.log(err);
+        }
+      }
+    </script>
+  </body>
+</html>
