@@ -9,4 +9,10 @@ export default class Contacts {
     let contacts = await contactsModel.find();
     return contacts;
   };
+
+  create = async (contact) => {
+    let newContact = new contactsModel(contact);
+    let result = await newContact.save();
+    return result;
+  };
 }

@@ -16,3 +16,5 @@ switch (config.persistence) {
     Contacts = ContactMemory;
     break;
 }
+
+export default Contacts;

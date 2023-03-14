@@ -7,4 +7,7 @@ export default class Contacts {
     //sino simplemente returnamos el arreglo llamado data
     return this.data;
   };
+  create = (contact) => {
+    this.data.push(contact);
+  };
 }
