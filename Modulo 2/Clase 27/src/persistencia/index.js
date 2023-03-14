@@ -12,7 +12,6 @@ async function guardarDatos(dato) {
   const nuevoDato = new toyModel(dato);
   const respuesta = await nuevoDato.save();
   return respuesta;
-
   //datos.push(dato);
 }
 
