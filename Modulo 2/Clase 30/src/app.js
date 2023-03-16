@@ -1,5 +1,6 @@
 import express from "express";
 import mongoose from "mongoose";
+import cors from "cors";
 import userRouter from "./routes/users.routes.js";
 import businessRouter from "./routes/business.routes.js";
 import orderRouter from "./routes/orders.routes.js";
@@ -17,6 +18,7 @@ const connection = mongoose.connect(
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+app.use(cors());
 
 app.use("/api/users", userRouter);
 app.use("/api/business", businessRouter);
